@@ -28,7 +28,7 @@ case "$m" in
     "n" | "N" | "y" | "Y")
         if [[ "$sm" == "true" || "$sm" == "false" ]]; then
             echo "Start a Tournament Runner ..."
-            ./rcssmonitor --auto-reconnect-mode on --auto-reconnect-wait 2 &
+            rcssmonitor --auto-reconnect-mode on --auto-reconnect-wait 2 &
             chmod +x *.sh
 
             while true
