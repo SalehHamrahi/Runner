@@ -50,7 +50,7 @@ Team3
 Team4
 ```
 
-*First match: Team1 vs Team2 
+*First match: Team1 vs Team2  
 Second match: Team3 vs Team4*
 
 **Format 2 (Sequential Matches):**
