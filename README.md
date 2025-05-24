@@ -41,7 +41,7 @@ Place team executable binaries in the `Bins/` folder. Each team must be independ
 
 In `Games.txt`, define matches using one of the following formats:
 
-**Format 1 (Parallel Matches):**
+**Format 1 (Normal (Round-Robin)):**
 
 ```
 Team1
@@ -53,7 +53,7 @@ Team4
 *First match: Team1 vs Team2  
 Second match: Team3 vs Team4*
 
-**Format 2 (Sequential Matches):**
+**Format 2 (Elimination (Winner-Stays)):**
 ```
 TeamA
 TeamB
@@ -62,8 +62,6 @@ TeamC
 
 *First match: Team1 vs Team2  
 Second match: Winner vs Team3*
-
-Note: Use folder names containing team binaries, not team display names.
 
 ### Running the Tournament
 
