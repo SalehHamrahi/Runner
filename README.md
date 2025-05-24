@@ -1,42 +1,114 @@
-# Tournament Runner
-## You can use Tournament Runner to run Soccer Simulation 2D tournaments.
------------------------
+# Runner Tournament Manager
 
+[**فارسی**](README-Fa.md)
 
+A simple and practical system for running Runner Tournaments with game management, result recording, and visual/textual analysis capabilities.
 
-### :gear: Get started
+## Introduction
 
-First you should run `Setup.py` and then put all the binaries in `Bins` directory. All binaries must contain `localStartAll` and `start` script.
-After that edit 'Server', 'Channel'  and Bot 'Token' in all files in 'ScBot' directory
+This project is designed to manage Runner team tournaments. Simply place each team's binary files in the `Bins/` folder, define the games in `Games.txt`, and start the tournament by running `Run.sh`.
 
-To run a tournament, put the list of the games in `Games.txt` and then, execute `Run.sh` with
+### Features
+
+- Automated game execution between teams
+- Game results recording in `wins.txt` with winner determination
+- Tournament summary in `Result.txt`
+- Visual analysis charts in `static/` folder
+
+## Project Structure
+
 ```
+Runner/
+├── Bins/           # Team executable binaries
+├── Games.txt       # Match configurations (team pairings)
+├── wins.txt        # Match results (output)
+├── Result.txt      # Final standings summary (output)
+├── static/         # Visual analysis assets
+├── run.sh          # Tournament execution script
+├── Analyzer/       # Analysis and processing scripts
+├── Logs/           # Complete game logs
+└── README.md
+```
+
+
+## Usage Guide
+
+### Team Preparation
+
+Place team executable binaries in the `Bins/` folder. Each team must be independently executable.
+
+### Match Configuration
+
+In `Games.txt`, define matches using one of the following formats:
+
+**Format 1 (Parallel Matches):**
+
+```
+Team1
+Team2
+Team3
+Team4
+```
+
+*First match: Team1 vs Team2 
+Second match: Team3 vs Team4*
+
+**Format 2 (Sequential Matches):**
+```
+TeamA
+TeamB
+TeamC
+```
+
+*First match: Team1 vs Team2  
+Second match: Winner vs Team3*
+
+Note: Use folder names containing team binaries, not team display names.
+
+### Running the Tournament
+
+Execute the tournament by running:
+```bash
 ./Run.sh
 ```
-After the games are finished, you can see logs (.rcg and .rcl files) compressed to .tar.gz in Logs directory. 
 
-Also, you can see Holes and Clashes table in the terminal when the games are done.
+This will:
 
--------------------------------------------
+1. Run games according to `Games.txt`
+2. Save results in wins.txt and `Result.txt`
+3. Generate visual analyses in `static/`
+4. Store complete game logs in `Logs/`
 
-### :hash: Test Game
+# Outputs
 
-A test game is a short 300 Cycle game against Helios2023. It ONLY has one half and no penalty or extra time.
+- `wins.txt`: Detailed game results with winners
+- `Result.txt`: Summary of wins/losses/draws per team
+- `static/`: Tournament analysis charts
+- `Logs/`: Complete game logs for review
 
-You can run it with `./TestTeams.sh`
+# Requirements
 
-Note that for test games, you should put the teams list in `TestGames.txt` and Helios2023 should be available in Bins directory.   
+- Linux or macOS
+- Python 3.x (with networkx, matplotlib etc.)
+- Execute permission for Run.sh (chmod +x Run.sh)
 
--------------------------------------------
+# Installing Prerequisites
+Install required Python packages:
 
-### :green_book: Note: This Repository uses [HoleAnalyzer](https://github.com/RCSS-IR/HoleAnalyzer) for analyzing Holes&Clashes.
-Thanks go to [Nader Zare](https://github.com/naderzare), [Alireza Sadraii](https://github.com/sadraiiali), [Omid Amini](https://github.com/mroa4) and [Aref Sayareh](https://github.com/Arefsa78) for providing HoleAnalyzer.
+```bash
+pip install matplotlib networkx
+```
 
---------------------------------------------
+# License
 
-# :heavy_exclamation_mark: Issues
-If you have any problem, do not hesitate to contact me via Email: mazloomsoroush@gmail.com 
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-OR
+# Contact
 
-go to https://github.com/SoroushGit/SummerCup2023-Tournament-Runner and open an issue.
+For issues/questions, please use the repository's Issues section.
+
+---
+
+[**Soroush Mazloum**](https://github.com/SoroushMazloum)
+
+[**Saleh Hamrahi**](https://github.com/SalehHamrahi)
