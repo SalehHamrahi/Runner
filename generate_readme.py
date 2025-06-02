@@ -69,7 +69,7 @@ def generate_readme(results_path, network_img_path, stats_img_path):
 
 """
 
-    with open("README_Analiz.md", "w", encoding="utf-8") as file:
+    with open("README_Analyz.md", "w", encoding="utf-8") as file:
         file.write(readme_content.strip())
 
 if __name__ == "__main__":
