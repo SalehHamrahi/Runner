@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 
@@ -66,25 +65,12 @@ def generate_readme(results_path, network_img_path, stats_img_path):
 
 - **نمودار آماری**:
   - مقایسه عملکرد تیم‌ها بر اساس برد/مساوی/باخت
-  - نمایش کارایی دفاعی و تهاجمی تیم‌ها
   - آنالیز تفاضل گل و امتیازات کسب‌شده
 
-### روش اجرای پروژه
-1. نتایج مسابقات در فایل `Results.txt` ذخیره می‌شود
-2. اسکریپت تحلیل با دستور زیر اجرا می‌شود:
-
-```bash
-python tournament_analyzer.py
-```
-
-3. خروجی‌ها در دایرکتوری `Analysis_Results` ذخیره می‌شوند
-4. این فایل README به‌صورت خودکار تولید می‌شود
 """
 
     with open("README_Analiz.md", "w", encoding="utf-8") as file:
         file.write(readme_content.strip())
-
-    print("✅ فایل README_Analiz.md با موفقیت ساخته شد!")
 
 if __name__ == "__main__":
     results_path = "./Results.txt"
